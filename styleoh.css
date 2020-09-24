@@ -1,0 +1,150 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#container {
+  width: 100%;
+}
+
+body {
+  font-size: 1em;
+  font-family: arial;
+}
+
+#logo {
+  display: flex;
+  justify-content: center;
+}
+
+#localisation {
+  display: flex;
+  justify-content: center;
+  border: 2px solid #dbdada;
+  background-color: #eaeaea;
+  width: 100%;
+  height: 100%;
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.dec {
+  background-color: #f6f6f6;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+.btn {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.suggestion {
+  display: flex;
+  justify-content: center;
+  border: 2px solid #dbdada;
+  box-shadow: 5px 5px 5px #e9e9e9;
+  cursor: pointer;
+  background-color: #f6f6f6;
+  padding: 1.55rem 1rem;
+  border-radius: 20px/15px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 1rem;
+  transform: scale(1);
+  transition-property: transform 400ms;
+}
+
+.restaurant_container {
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.restaurant {
+  display: flex;
+  flex-direction: column;
+  border-radius: 25px;
+  width: 90%;
+  padding: 10px;
+}
+
+.photo {
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  width: 100%;
+  height: 200px;
+}
+
+.photo_palette {
+  background-image: url(image/palette.jpg);
+}
+
+.photo_note_enchanter {
+  background-image: url(image/la_note_enchanter.jpg);
+}
+
+.photo_bastille {
+  background-image: url(image/bastille.jpg);
+}
+
+.photo_le_gourmand {
+  background-image: url(image/le_gourmand.jpg);
+}
+
+.position {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.new {
+  background-color: #99e2d0;
+  border: 1px solid #99e2d0;
+  color: #008766;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.title {
+  display: flex;
+  width: 70%;
+  height: 100%;
+  flex-direction: column;
+}
+
+.description {
+  padding: 10px;
+  background-color: white;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  box-shadow: 5px 5px 5px #e9e9e9;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.icone {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 20px;
+  margin-left: 30px;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
