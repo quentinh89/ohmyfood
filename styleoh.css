@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  font-size: 14px;
 }
 
 #container {
@@ -20,12 +21,22 @@ body {
 #localisation {
   display: flex;
   justify-content: center;
-  border: 2px solid #dbdada;
+  border-top: 1px solid #dbdada;
   background-color: #eaeaea;
   width: 100%;
   height: 100%;
   font-size: 1.2em;
   margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.explo {
+  border: 1px solid red;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 .dec {
@@ -33,6 +44,11 @@ body {
   display: flex;
   text-align: center;
   flex-direction: column;
+  padding: 25px;
+}
+.dec p {
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 .btn {
@@ -54,8 +70,17 @@ body {
   margin-left: 10px;
   margin-right: 10px;
   font-size: 1rem;
-  transform: scale(1);
+  justify-content: space-around;
+}
+
+.suggestion:hover {
+  background-color: #f5edff;
+  /*transform: scale(2, 2);*/
   transition-property: transform 400ms;
+}
+
+.suggestion:hover i {
+  color: #9356dc;
 }
 
 .restaurant_container {
@@ -63,6 +88,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 }
 
 .restaurant {
@@ -71,6 +97,7 @@ body {
   border-radius: 25px;
   width: 90%;
   padding: 10px;
+  padding-bottom: 15px;
 }
 
 .photo {
@@ -139,6 +166,22 @@ body {
   justify-content: flex-end;
   font-size: 20px;
   margin-left: 30px;
+}
+
+.coeur_plein {
+  display: none;
+}
+
+.restaurant:hover .coeur_plein {
+  display: block;
+}
+.restaurant:hover .coeur_vide {
+  display: none;
+}
+
+.footer {
+  font-size: 12px;
+  margin-bottom: 5px;
 }
 
 footer {
