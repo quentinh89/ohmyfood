@@ -25,18 +25,27 @@ body {
   background-color: #eaeaea;
   width: 100%;
   height: 100%;
-  font-size: 1.2em;
+  font-size: 1.1em;
   margin-top: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
+#icone_localisation {
+  margin-right: 10px;
+}
+
 .explo {
-  border: 1px solid red;
+  border: none;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  background-color: #a95ddc;
+  background-image: linear-gradient(180deg, rgba(228, 112, 218, 1), #af5fdc);
+  color: #ffffff;
 }
 
 .dec {
@@ -61,7 +70,7 @@ body {
   display: flex;
   justify-content: center;
   border: 2px solid #dbdada;
-  box-shadow: 5px 5px 5px #e9e9e9;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   background-color: #f6f6f6;
   padding: 1.55rem 1rem;
@@ -71,16 +80,29 @@ body {
   margin-right: 10px;
   font-size: 1rem;
   justify-content: space-around;
+  position: relative;
 }
 
 .suggestion:hover {
   background-color: #f5edff;
-  /*transform: scale(2, 2);*/
-  transition-property: transform 400ms;
 }
 
 .suggestion:hover i {
   color: #9356dc;
+}
+
+.nombre {
+  width: 20px;
+  height: 20px;
+  border: 1px solid;
+  border-radius: 100%;
+  background-color: #9356dc;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: -10px;
 }
 
 .restaurant_container {
@@ -89,6 +111,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  padding-bottom: 25px;
 }
 
 .restaurant {
@@ -163,13 +186,16 @@ body {
 
 .icone {
   display: flex;
-  justify-content: flex-end;
-  font-size: 20px;
   margin-left: 30px;
 }
 
 .coeur_plein {
   display: none;
+  font-size: 20px;
+  color: #a95ddc;
+}
+.coeur_vide {
+  font-size: 20px;
 }
 
 .restaurant:hover .coeur_plein {
@@ -181,13 +207,27 @@ body {
 
 .footer {
   font-size: 12px;
-  margin-bottom: 5px;
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  flex-direction: column;
+}
+
+.renseignement {
+  display: flex;
+  padding-top: 10px;
+  flex-direction: column;
 }
 
 footer {
   background-color: black;
   color: white;
-  display: flex;
-  justify-content: center;
-  width: 100%;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+@media all and (max-width: 600px) {
+  .footer {
+    justify-content: center;
+  }
 }
