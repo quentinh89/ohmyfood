@@ -53,17 +53,22 @@ body {
   display: flex;
   text-align: center;
   flex-direction: column;
-  padding: 25px;
+  padding: 30px;
 }
 .dec p {
   padding-bottom: 20px;
   padding-top: 20px;
 }
 
+.title_fonctionnement {
+  padding: 15px 0px 15px 10px;
+}
+
 .btn {
   width: 100%;
   display: flex;
   flex-direction: column;
+  margin-bottom: 30px;
 }
 
 .suggestion {
@@ -112,6 +117,12 @@ body {
   align-items: center;
   justify-content: space-between;
   padding-bottom: 25px;
+  padding-top: 20px;
+}
+
+.title_resto {
+  display: flex;
+  width: 93%;
 }
 
 .restaurant {
@@ -206,17 +217,33 @@ body {
 }
 
 .footer {
+  width: 100%;
   font-size: 12px;
   display: flex;
-  padding-top: 10px;
-  padding-bottom: 5px;
   flex-direction: column;
+  padding-top: 5px;
 }
 
 .renseignement {
   display: flex;
-  padding-top: 10px;
+  padding-top: 5px;
   flex-direction: column;
+}
+
+#renseignement_resto {
+  padding: 3px 0px 3px 0px;
+}
+
+#partenaire {
+  padding: 3px 0px 3px 0px;
+}
+
+#legal {
+  padding: 3px 0px 3px 0px;
+}
+
+#contact {
+  padding: 3px 0px 3px 0px;
 }
 
 footer {
@@ -226,8 +253,4 @@ footer {
   padding-bottom: 20px;
 }
 
-@media all and (max-width: 600px) {
-  .footer {
-    justify-content: center;
-  }
-}
+@media all and (max-width: 320px);
