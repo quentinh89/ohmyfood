@@ -1,7 +1,6 @@
 * {
   padding: 0;
   margin: 0;
-  font-size: 14px;
 }
 
 #container {
@@ -35,6 +34,11 @@ body {
   margin-right: 10px;
 }
 
+.position_explo {
+  display: flex;
+  justify-content: center;
+}
+
 .explo {
   border: none;
   border-bottom-left-radius: 15px;
@@ -46,6 +50,7 @@ body {
   background-color: #a95ddc;
   background-image: linear-gradient(180deg, rgba(228, 112, 218, 1), #af5fdc);
   color: #ffffff;
+  width: 80%;
 }
 
 .dec {
@@ -61,7 +66,8 @@ body {
 }
 
 .title_fonctionnement {
-  padding: 15px 0px 15px 10px;
+  display: flex;
+  margin-left: 15px;
 }
 
 .btn {
@@ -84,7 +90,6 @@ body {
   margin-left: 10px;
   margin-right: 10px;
   font-size: 1rem;
-  justify-content: space-around;
   position: relative;
 }
 
@@ -94,6 +99,10 @@ body {
 
 .suggestion:hover i {
   color: #9356dc;
+}
+
+.icone_suggestion {
+  width: 10%;
 }
 
 .nombre {
@@ -120,7 +129,15 @@ body {
   padding-top: 20px;
 }
 
-.title_resto {
+.restaurant_liste {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 25px;
+  padding-top: 20px;
+  width: 90%;
+}
+
+.title_fonction {
   display: flex;
   width: 93%;
 }
@@ -129,8 +146,7 @@ body {
   display: flex;
   flex-direction: column;
   border-radius: 25px;
-  width: 90%;
-  padding: 10px;
+  width: 100%;
   padding-bottom: 15px;
 }
 
@@ -141,12 +157,20 @@ body {
   height: 200px;
 }
 
+.photo_palette,
+.photo_note_enchantée,
+.photo_bastille,
+.photo_le_gourmand {
+  background-position: center;
+  background-size: cover;
+}
+
 .photo_palette {
   background-image: url(image/palette.jpg);
 }
 
-.photo_note_enchanter {
-  background-image: url(image/la_note_enchanter.jpg);
+.photo_note_enchantée {
+  background-image: url(image/la_note_enchantée.jpg);
 }
 
 .photo_bastille {
@@ -202,11 +226,14 @@ body {
 
 .coeur_plein {
   display: none;
-  font-size: 20px;
-  color: #a95ddc;
+  font-size: 25px;
+  background-image: linear-gradient(50deg, rgba(228, 112, 218, 1), #af5fdc);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 .coeur_vide {
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .restaurant:hover .coeur_plein {
@@ -222,6 +249,10 @@ body {
   display: flex;
   flex-direction: column;
   padding-top: 5px;
+}
+
+.title_footer {
+  font-size: 15px;
 }
 
 .renseignement {
@@ -253,4 +284,43 @@ footer {
   padding-bottom: 20px;
 }
 
-@media all and (max-width: 320px);
+@media (min-width: 630px) {
+  .explo {
+    width: 40%;
+  }
+
+  .title_fonctionnement {
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  .restaurant_liste {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .restaurant {
+    width: 45%;
+  }
+
+  .btn {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .suggestion {
+    width: 25%;
+  }
+
+  .title_footer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .rens {
+    justify-content: space-evenly;
+    display: flex;
+  }
+}
