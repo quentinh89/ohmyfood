@@ -332,11 +332,31 @@ footer {
 ***********************************************
 ************************************************
 */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#container_menu {
+  width: 100%;
+}
 
 body {
-  font-size: 10px;
+  font-size: 1em;
   font-family: arial;
 }
-h2 {
-  font-style: italic;
+
+#logo {
+  margin-bottom: 20px;
+}
+
+#photo_palette {
+  display: flex;
+  border: 3px solid red;
+}
+
+.container_suggestion {
+  display: flex;
+  position: absolute;
+  border: 3px solid red;
 }
