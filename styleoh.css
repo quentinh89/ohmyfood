@@ -212,7 +212,6 @@ body {
 }
 
 .title {
-  display: flex;
   width: 70%;
   height: 100%;
   flex-direction: column;
@@ -426,17 +425,37 @@ hr {
   font-size: 13px;
   padding: 10px;
   margin: 15px;
-}
-
-.menu_02 {
   display: flex;
-  align-items: center;
-  width: 100%;
+}
+.menu_01:hover .block_icone {
+  animation: slidein;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
 }
 
-.menu_02:hover {
-  animation: slider 5s;
+@keyframes slidein {
+  0% {
+    width: 0;
+  }
+
+  to {
+    width: 270px;
+  }
 }
+
+.block_icone {
+  display: flex;
+  width: 100px;
+  width: 0;
+  overflow: hidden;
+}
+
+.icone_check {
+  display: flex;
+  font-size: medium;
+  background-color: #34ebbd;
+}
+
 strong {
   font-size: 14px;
 }
@@ -445,6 +464,9 @@ strong {
   display: flex;
   flex-direction: column;
   width: 85%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .prix {
