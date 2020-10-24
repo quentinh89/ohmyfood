@@ -445,7 +445,12 @@ hr {
 .menu_02 {
   display: flex;
   width: 85%;
-  margin: 15px;
+  margin: 10px 0 10px 10px;
+}
+.menu_02:hover {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .block_icone {
@@ -474,9 +479,6 @@ strong {
   display: flex;
   flex-direction: column;
   width: 85%;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
 }
 
 .prix {
