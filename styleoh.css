@@ -236,7 +236,7 @@ body {
 .coeur_plein {
   display: none;
   font-size: 25px;
-  background-image: linear-gradient(50deg, rgba(228, 112, 218, 1), #af5fdc);
+  background-image: linear-gradient(20deg, rgb(241, 182, 237), #af5fdc);
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
@@ -380,7 +380,6 @@ footer {
   border-top-right-radius: 25px;
   margin-top: -30px;
   padding-top: 30px;
-  animation: slide 5s;
 }
 
 .title_palette {
@@ -425,21 +424,12 @@ hr {
   font-size: 13px;
   margin: 15px;
   display: flex;
+  animation: slide 4s;
 }
 .menu_01:hover .block_icone {
   animation: slider;
-  animation-duration: 4s;
+  animation-duration: 2s;
   animation-fill-mode: forwards;
-}
-
-@keyframes slider {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 80px;
-  }
 }
 
 .menu_02 {
@@ -459,6 +449,11 @@ hr {
   overflow: hidden;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
+}
+
+.check_rotation {
+  animation: rotation;
+  animation-duration: 4s;
 }
 
 .icone_check {
@@ -528,7 +523,24 @@ strong {
   }
 }
 
-.block {
-  width: 40%;
-  background-color: red;
+@keyframes slider {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 80px;
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotateZ(2500deg);
+  }
+  50% {
+    transform: rotateZ(1600deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
 }
