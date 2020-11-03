@@ -186,7 +186,7 @@ body {
 
 .photo_palette,
 .photo_note_enchantée {
-  background-position: center;
+  background-position: 25% 58%;
   background-size: cover;
 }
 .photo_bastille,
@@ -289,7 +289,7 @@ body {
 
 .renseignement {
   display: flex;
-  padding-top: 5px;
+  padding-top: 15px;
   flex-direction: column;
 }
 
@@ -313,7 +313,7 @@ footer {
   background-color: black;
   color: white;
   padding-left: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 32px;
 }
 
 @media (min-width: 630px) {
@@ -414,7 +414,7 @@ footer {
 }
 .position_title {
   display: flex;
-  width: 70%;
+  width: 100%;
   justify-content: center;
 }
 .position_icone {
@@ -448,15 +448,40 @@ hr {
   display: flex;
   animation: slide 18s;
 }
+@keyframes slide {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .menu_01:hover .block_icone {
   animation: slider;
   animation-duration: 2s;
   animation-fill-mode: forwards;
 }
+@keyframes slider {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 80px;
+  }
+}
 
 .menu_02 {
   display: flex;
-  width: 85%;
+  width: 75%;
   margin: 10px 0 10px 10px;
 }
 
@@ -471,6 +496,15 @@ hr {
 .menu_01:hover .check_rotation {
   animation: rotation;
   animation-duration: 2s;
+}
+@keyframes rotation {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(1440deg);
+  }
 }
 
 .icone_check {
@@ -490,20 +524,22 @@ strong {
 .choix {
   display: flex;
   flex-direction: column;
-  width: 85%;
+  width: 90%;
 }
 p {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  width: 95%;
 }
 
 .prix {
   display: flex;
   justify-content: space-evenly;
   padding-top: 5px;
-  padding-right: 20px;
+  padding-right: 2px;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .position_commande {
@@ -529,56 +565,20 @@ p {
   justify-content: center;
 }
 
-@keyframes slide {
-  0% {
-    transform: translateY(-200px);
-    opacity: 0;
-  }
-  50% {
-    transform: translateY(0);
-    opacity: 0.5;
-  }
-
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slider {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 80px;
-  }
-}
-
-@keyframes rotation {
-  0% {
-    transform: rotateZ(0deg);
-  }
-
-  100% {
-    transform: rotateZ(1440deg);
-  }
-}
-
 @media (min-width: 630px) {
+  .position_icone {
+    width: 10%;
+  }
   .explo {
     width: 40%;
   }
   .block_menu {
-    display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 30%;
+    width: 33%;
     padding-top: 25px;
   }
   .bm2 {
     display: flex;
-    justify-content: space-between;
   }
 
   .title_fonctionnement {
@@ -617,6 +617,26 @@ p {
   }
 }
 
+/**************************************************
+*******************MENU LA NOTE ANCHANTEE**********
+**************************************************/
+
+/**************************************************
+******************a la française*******************
+**************************************************/
+@media (min-width: 630px) {
+  .photo_bastille {
+    background-position: 25% 64%;
+  }
+}
+
+/**************************************************
+*****************le délice des sens****************
+**************************************************/
+
+/***************************************************
+********************ANIMATION***********************
+***************************************************/
 .chargement {
   position: absolute;
   width: 100%;
@@ -627,8 +647,6 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  padding-bottom: 29%;
 }
 .lettre {
   color: #ffffff;
@@ -698,3 +716,6 @@ p {
 .lettre:nth-child(8) {
   animation-delay: 0.8s;
 }
+/*************************************************
+**************************************************
+*************************************************/
