@@ -254,23 +254,24 @@ body {
   width: 25%;
 }
 
-.coeur_plein {
+#coeur_plein {
   font-size: 25px;
   background-image: linear-gradient(20deg, rgb(241, 182, 237), #af5fdc);
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-
+  animation: heart;
+  animation-duration: 3s;
   display: none;
 }
-.coeur_vide {
+#coeur_vide {
   font-size: 25px;
 }
 
-.icone:hover .coeur_plein {
+.icone:hover #coeur_plein {
   display: block;
 }
-.icone:hover .coeur_vide {
+.icone:hover #coeur_vide {
   display: none;
   opacity: 0;
 }
@@ -446,7 +447,8 @@ hr {
   font-size: 13px;
   margin: 15px;
   display: flex;
-  animation: slide 18s;
+  animation: slide 2s;
+  width: 90%;
 }
 @keyframes slide {
   0% {
@@ -475,13 +477,13 @@ hr {
   }
 
   to {
-    width: 80px;
+    width: 20%;
   }
 }
 
 .menu_02 {
   display: flex;
-  width: 75%;
+  width: 100%;
   margin: 10px 0 10px 10px;
 }
 
@@ -530,7 +532,7 @@ p {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  width: 95%;
+  display: flex;
 }
 
 .prix {
@@ -642,7 +644,7 @@ p {
   width: 100%;
   height: 100%;
   background-color: white;
-  animation: disparition 6s linear;
+  animation: disparition 1s linear;
   animation-fill-mode: forwards;
   display: flex;
   justify-content: center;
@@ -653,7 +655,7 @@ p {
   font-size: 30px;
   letter-spacing: 15px;
   margin-bottom: 150px;
-  animation: flash 3s linear;
+  animation: flash 1s linear;
   animation-iteration-count: 1;
 }
 
@@ -719,3 +721,50 @@ p {
 /*************************************************
 **************************************************
 *************************************************/
+.containeur_menu {
+  height: 50px;
+  display: flex;
+}
+
+.texte_menu {
+  background-color: blue;
+  width: 100%;
+  height: 100%;
+}
+.icone_menu {
+  background-color: brown;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  animation: ap 5s;
+  animation: forwards;
+}
+@keyframes ap {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 40%;
+  }
+}
+
+.checkbox_anime {
+  width: 50%;
+}
+@keyframes slide_checkbox {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 300px;
+  }
+}
+.containeur_menu:hover .checkbox_anime {
+  animation: slide_checkbox;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.px {
+  background-color: blue;
+}
